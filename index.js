@@ -105,7 +105,12 @@ const howOld = inventors.sort(function (firstPerson, secondPerson) {
 })
 console.table(howOld)
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
-// https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+// Go to https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris and put below code into console, then press return.
+const fullList = document.querySelector('.mw-category')
+const links = Array.from(fullList.querySelectorAll('a'))
+const de = links.map(link => link.textContent)
+
+console.table(de)
 // 7. sort Exercise
 // Sort the people alphabetically by last name
 // 8. Reduce Exercise
