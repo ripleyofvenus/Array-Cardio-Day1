@@ -84,8 +84,18 @@ console.table(bornFifteen)
 const firstLast = inventors.map(inventor => inventor.first + ' ' + inventor.last)
 
 console.table(firstLast)
-// Array.prototype.sort()
+
 // 3. Sort the inventors by birthdate, oldest to youngest
+const oldToYoung = inventors.sort(function(firstPerson, secondPerson) {
+  if (firstPerson.year > secondPerson.year) {
+    return 1
+  } else {
+    return -1
+  }
+})
+
+console.table(oldToYoung)
+
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
 // 5. Sort the inventors by years lived
