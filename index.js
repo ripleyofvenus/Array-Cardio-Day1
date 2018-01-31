@@ -106,13 +106,19 @@ const howOld = inventors.sort(function (firstPerson, secondPerson) {
 console.table(howOld)
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // Go to https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris and put below code into console, then press return.
-const fullList = document.querySelector('.mw-category')
-const links = Array.from(fullList.querySelectorAll('a'))
-const de = links.map(link => link.textContent)
-
-console.table(de)
+// const fullList = document.querySelector('.mw-category')
+// const links = Array.from(fullList.querySelectorAll('a'))
+// const de = links.map(link => link.textContent)
+//
+// console.table(de)
 // 7. sort Exercise
 // Sort the people alphabetically by last name
+const alphabetically = people.sort(function(firstPerson, secondPerson) {
+  const [fLast, fFirst] = firstPerson.split(', ')
+  const [sLast, sFirst] = secondPerson.split(', ')
+  return fLast > sLast ? 1 : -1
+})
+console.table(alphabetically)
 // 8. Reduce Exercise
 // Sum up the instances of each of these
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
