@@ -86,13 +86,7 @@ const firstLast = inventors.map(inventor => inventor.first + ' ' + inventor.last
 console.table(firstLast)
 
 // 3. Sort the inventors by birthdate, oldest to youngest
-const oldToYoung = inventors.sort(function(firstPerson, secondPerson) {
-  if (firstPerson.year > secondPerson.year) {
-    return 1
-  } else {
-    return -1
-  }
-})
+const oldToYoung = inventors.sort((firstPerson, secondPerson) => firstPerson.year > secondPerson.year ? 1 : -1)
 
 console.table(oldToYoung)
 
